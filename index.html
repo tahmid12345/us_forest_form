@@ -20,7 +20,7 @@
     <div style="padding: 5px">
       <div class="form-group">
         <label for="exampleFormControlSelect1">ES Class</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <select class="form-control" id="selectedClass">
           <option value="provisioning">Provisioning</option>
           <option value="regulating">Regulating</option>
           <option value="supporting">Supporting</option>
@@ -28,52 +28,666 @@
         </select>
       </div>
 
-      <!-- ------------------------------------------ items --------------------------------- -->
+      <!-- -------------------------------- provisioning --------------------------------- -->
+
+      <!-- ----------------------------- items --------------------------------- -->
 
       <div class="provisioning_class">
         <!-- ------------------------- food ---------------------- -->
-        <input type="radio" id="food" name="food" onclick="foodRadio()" /> Food
-        <button
-          type="button"
-          class="btn btn-info btn-sm food_button_plus"
-          id="food_button_plus"
-          onclick="food_button_plus_click()"
-        >
-          +
-        </button>
+        <div>
+          <input type="radio" id="food" name="food" onclick="foodRadio()" />
+          Food
+          <button
+            type="button"
+            class="btn btn-info btn-sm food_button_plus"
+            id="food_button_plus"
+            onclick="food_button_plus_click()"
+          >
+            +
+          </button>
 
-        <div class="food_button_extension" id="food_button_extension">
-          <div class="row" style="margin: 0; padding: 0" id="food_row">
-            <div class="col-md-3">
-              <div class="form-field" style="margin-top: 30px">
-                <label for="">SubES Name</label>
-                <input type="text" />
+          <div class="food_button_extension" id="food_button_extension">
+            <div class="row" style="margin: 0; padding: 0" id="food_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
 
-                <label for="">SubES Quantity</label>
-                <input type="text" />
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
 
-                <label for="">SubES Quantity Unit</label>
-                <input type="text" />
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
 
-                <div>
-                  <label for="">SubES Value</label><br />
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
                   <input type="text" />
                 </div>
-
-                <label for="">SubES Value Unit</label>
-                <input type="text" />
-
-                <label for="">SubES Validation</label>
-                <input type="text" />
               </div>
             </div>
           </div>
         </div>
 
         <!-- ------------------------- food ---------------------- -->
+
+        <br />
+        <!-- ------------------------- water ---------------------- -->
+
+        <div>
+          <input type="radio" id="water" name="water" onclick="waterRadio()" />
+          Water
+          <button
+            type="button"
+            class="btn btn-info btn-sm water_button_plus"
+            id="water_button_plus"
+            onclick="water_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div class="water_button_extension" id="water_button_extension">
+            <div class="row" style="margin: 0; padding: 0" id="water_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------------- water ---------------------- -->
+
+        <br />
+        <!-- ------------------------- raw materials ---------------------- -->
+
+        <div>
+          <input type="radio" id="raw" name="raw" onclick="rawRadio()" />
+          Raw Materials
+          <button
+            type="button"
+            class="btn btn-info btn-sm raw_button_plus"
+            id="raw_button_plus"
+            onclick="raw_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div class="raw_button_extension" id="raw_button_extension">
+            <div class="row" style="margin: 0; padding: 0" id="raw_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------------- raw materials ---------------------- -->
+
+        <br />
+        <!-- ------------------------- Generice resources ---------------------- -->
+
+        <div>
+          <input
+            type="radio"
+            id="generic"
+            name="generic"
+            onclick="genericRadio()"
+          />
+          Generic Resources
+          <button
+            type="button"
+            class="btn btn-info btn-sm generic_button_plus"
+            id="generic_button_plus"
+            onclick="generic_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div class="generic_button_extension" id="generic_button_extension">
+            <div class="row" style="margin: 0; padding: 0" id="generic_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------------- Generice resources ---------------------- -->
+        <br />
+
+        <!-- ------------------------- Medicinal resources ---------------------- -->
+
+        <div>
+          <input
+            type="radio"
+            id="medicinal"
+            name="medicinal"
+            onclick="medicinalRadio()"
+          />
+          Medicinal resources
+          <button
+            type="button"
+            class="btn btn-info btn-sm medicinal_button_plus"
+            id="medicinal_button_plus"
+            onclick="medicinal_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div
+            class="medicinal_button_extension"
+            id="medicinal_button_extension"
+          >
+            <div class="row" style="margin: 0; padding: 0" id="medicinal_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------------- Medicinal resources ---------------------- -->
+
+        <br />
+
+        <!-- ------------------------- Ornamental resources ---------------------- -->
+
+        <div>
+          <input
+            type="radio"
+            id="ornamental"
+            name="ornamental"
+            onclick="ornamentalRadio()"
+          />
+          Ornamental resources
+          <button
+            type="button"
+            class="btn btn-info btn-sm ornamental_button_plus"
+            id="ornamental_button_plus"
+            onclick="ornamental_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div
+            class="ornamental_button_extension"
+            id="ornamental_button_extension"
+          >
+            <div class="row" style="margin: 0; padding: 0" id="ornamental_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ------------------------- Ornamental resources ---------------------- -->
       </div>
 
-      <!-- --------------------------------------------------------------------- end -  items  -->
+      <!-- -------------------------------------------------------- end -  items  -->
+
+      <!-- ------------------------------------------------------------- end - provisioning  -->
+
+      <!-- --------------------------------- regulating ------------------------------------ -->
+
+      <div class="regulating_class">
+        <!-- ------------------------- Ornamental Resources ---------------------- -->
+        <div>
+          <input
+            type="radio"
+            id="ornamental2"
+            name="ornamental2"
+            onclick="ornamental2Radio()"
+          />
+          Ornamental Resources
+          <button
+            type="button"
+            class="btn btn-info btn-sm ornamental2_button_plus"
+            id="ornamental2_button_plus"
+            onclick="ornamental2_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div
+            class="ornamental2_button_extension"
+            id="ornamental2_button_extension"
+          >
+            <div class="row" style="margin: 0; padding: 0" id="ornamental2_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------- Ornamental Resources ---------------------- -->
+        <br />
+        <!-- -------------------------  Climate Regulation ---------------------- -->
+        <div>
+          <input
+            type="radio"
+            id="climate"
+            name="climate"
+            onclick="climateRadio()"
+          />
+          Climate Regulation
+          <button
+            type="button"
+            class="btn btn-info btn-sm climate_button_plus"
+            id="climate_button_plus"
+            onclick="climate_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div class="climate_button_extension" id="climate_button_extension">
+            <div class="row" style="margin: 0; padding: 0" id="climate_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------- Climate Regulation ---------------------- -->
+        <br />
+        <!-- -------------------------  regulation of water flows ---------------------- -->
+        <div>
+          <input
+            type="radio"
+            id="regulation"
+            name="regulation"
+            onclick="regulationRadio()"
+          />
+          Regulation of water flows
+          <button
+            type="button"
+            class="btn btn-info btn-sm regulation_button_plus"
+            id="regulation_button_plus"
+            onclick="regulation_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div
+            class="regulation_button_extension"
+            id="regulation_button_extension"
+          >
+            <div class="row" style="margin: 0; padding: 0" id="regulation_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------- regulation of water flows ---------------------- -->
+
+        <br />
+        <!-- -------------------------  Moderation of extreme events ---------------------- -->
+        <div>
+          <input
+            type="radio"
+            id="moderation"
+            name="moderation"
+            onclick="moderationRadio()"
+          />
+          Moderation of extreme events
+          <button
+            type="button"
+            class="btn btn-info btn-sm moderation_button_plus"
+            id="moderation_button_plus"
+            onclick="moderation_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div
+            class="moderation_button_extension"
+            id="moderation_button_extension"
+          >
+            <div class="row" style="margin: 0; padding: 0" id="moderation_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------- Moderation of extreme events ---------------------- -->
+
+        <br />
+        <!-- -------------------------  Waste treatment ---------------------- -->
+        <div>
+          <input type="radio" id="waste" name="waste" onclick="wasteRadio()" />
+          Waste Treatment
+          <button
+            type="button"
+            class="btn btn-info btn-sm waste_button_plus"
+            id="waste_button_plus"
+            onclick="waste_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div class="waste_button_extension" id="waste_button_extension">
+            <div class="row" style="margin: 0; padding: 0" id="waste_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------- Waste treatment ---------------------- -->
+
+        <br />
+        <!-- -------------------------  Erosion prevention ---------------------- -->
+        <div>
+          <input
+            type="radio"
+            id="erosion"
+            name="erosion"
+            onclick="erosionRadio()"
+          />
+          Erosion Prevention
+          <button
+            type="button"
+            class="btn btn-info btn-sm erosion_button_plus"
+            id="erosion_button_plus"
+            onclick="erosion_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div class="erosion_button_extension" id="erosion_button_extension">
+            <div class="row" style="margin: 0; padding: 0" id="erosion_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------- Erosion prevention ---------------------- -->
+
+        <br />
+        <!-- -------------------------  Maintenance of soil fertility ---------------------- -->
+        <div>
+          <input
+            type="radio"
+            id="maintenance"
+            name="maintenance"
+            onclick="maintenanceRadio()"
+          />
+          Maintenance of soil fertility
+          <button
+            type="button"
+            class="btn btn-info btn-sm maintenance_button_plus"
+            id="maintenance_button_plus"
+            onclick="maintenance_button_plus_click()"
+          >
+            +
+          </button>
+
+          <div
+            class="maintenance_button_extension"
+            id="maintenance_button_extension"
+          >
+            <div class="row" style="margin: 0; padding: 0" id="maintenance_row">
+              <div class="col-md-3">
+                <div class="form-field" style="margin-top: 30px">
+                  <label for="">SubES Name</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity</label>
+                  <input type="text" />
+
+                  <label for="">SubES Quantity Unit</label>
+                  <input type="text" />
+
+                  <div>
+                    <label for="">SubES Value</label><br />
+                    <input type="text" />
+                  </div>
+
+                  <label for="">SubES Value Unit</label>
+                  <input type="text" />
+
+                  <label for="">SubES Validation</label>
+                  <input type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ------------------------- Maintenance of soil fertility ---------------------- -->
+
+        <br />
+      </div>
+
+      <!-- -------------------------------------------------------------- end -  regulating  -->
     </div>
 
     <!-- ------------------------------------------ container ------------------------------------------- -->

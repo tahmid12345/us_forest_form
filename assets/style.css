@@ -1,7 +1,11 @@
+/* ----------------------------------------- provisioning -----------------------------------------   */
+
 .provisioning_class {
   background-color: #e5e5e5;
   padding: 5px;
 }
+
+/* ------------ food ------------ */
 
 #food_button_plus {
   display: none;
@@ -10,3 +14,160 @@
 .food_button_extension {
   display: none;
 }
+
+/* ------------ food ------------ */
+
+/* ------------ water ----------  */
+
+#water_button_plus {
+  display: none;
+}
+
+.water_button_extension {
+  display: none;
+}
+
+/* ------------ water ----------  */
+
+/* ------------ raw ----------  */
+
+#raw_button_plus {
+  display: none;
+}
+
+.raw_button_extension {
+  display: none;
+}
+
+/* ------------ raw ----------  */
+
+/* ------------ generic ----------  */
+
+#generic_button_plus {
+  display: none;
+}
+
+.generic_button_extension {
+  display: none;
+}
+
+/* ------------ generic ----------  */
+
+/* ------------ medicinal ----------  */
+
+#medicinal_button_plus {
+  display: none;
+}
+
+.medicinal_button_extension {
+  display: none;
+}
+
+/* ------------ medicinal ----------  */
+
+/* ------------ ornamental ----------  */
+
+#ornamental_button_plus {
+  display: none;
+}
+
+.ornamental_button_extension {
+  display: none;
+}
+
+/* ------------ ornamental ----------  */
+
+/* ----------------------------------------- provisioning -----------------------------------------   */
+
+/* ----------------------------------------------- regulating --------------------------------------- */
+
+.regulating_class {
+  background-color: #e5e5e5;
+  padding: 5px;
+}
+
+/* ------------ ornamental 2 ------------ */
+
+#ornamental2_button_plus {
+  display: none;
+}
+
+.ornamental2_button_extension {
+  display: none;
+}
+
+/* ------------ ornamental 2 ------------ */
+
+/* ------------ Climate------------------ */
+
+#climate_button_plus {
+  display: none;
+}
+
+.climate_button_extension {
+  display: none;
+}
+
+/* ------------ climate  ---------------- */
+
+/* ------------ regulation------------------ */
+
+#regulation_button_plus {
+  display: none;
+}
+
+.regulation_button_extension {
+  display: none;
+}
+
+/* ------------ regulation  ---------------- */
+
+/* ------------ moderation ------------------ */
+
+#moderation_button_plus {
+  display: none;
+}
+
+.moderation_button_extension {
+  display: none;
+}
+
+/* ------------ moderation ---------------- */
+
+/* ------------ waste ------------------ */
+
+#waste_button_plus {
+  display: none;
+}
+
+.waste_button_extension {
+  display: none;
+}
+
+/* ------------ waste ---------------- */
+
+/* ------------ erosion ------------------ */
+
+#erosion_button_plus {
+  display: none;
+}
+
+.erosion_button_extension {
+  display: none;
+}
+
+/* ------------ erosion ---------------- */
+
+/* ------------ maintenance ------------------ */
+
+#maintenance_button_plus {
+  display: none;
+}
+
+.maintenance_button_extension {
+  display: none;
+}
+
+/* ------------ maintenance ---------------- */
+
+/* ----------------------------------------------- regulating --------------------------------------- */
